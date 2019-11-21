@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.emoflon.delta/src-gen" creationIcons="false"
+    editDirectory="/org.emoflon.delta.edit/src-gen" editorDirectory="/org.emoflon.delta.editor/src-gen"
+    modelPluginID="org.emoflon.delta" modelName="Delta" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>delta.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Delta" basePackage="org.emoflon" disposableProviderFactory="true"
+      ecorePackage="delta.ecore#/">
+    <genClasses ecoreClass="delta.ecore#//DeltaContainer">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference delta.ecore#//DeltaContainer/delta"/>
+    </genClasses>
+    <genClasses ecoreClass="delta.ecore#//Delta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute delta.ecore#//Delta/atomic"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference delta.ecore#//Delta/attributedelta"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference delta.ecore#//Delta/structuraldelta"/>
+    </genClasses>
+    <genClasses ecoreClass="delta.ecore#//StructuralDelta"/>
+    <genClasses ecoreClass="delta.ecore#//AttributeDelta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute delta.ecore#//AttributeDelta/newValue"/>
+    </genClasses>
+    <genClasses ecoreClass="delta.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference delta.ecore#//Link/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
